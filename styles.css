@@ -609,6 +609,16 @@ video {
   color: rgb(24 24 27 / var(--tw-text-opacity));
 }
 
+.text-\[\#FFC629\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 198 41 / var(--tw-text-opacity));
+}
+
+.text-\[\#0047FF\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 71 255 / var(--tw-text-opacity));
+}
+
 * {
   font-family: 'Inter', sans-serif;
 }
