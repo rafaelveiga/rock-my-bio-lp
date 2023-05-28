@@ -7,7 +7,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run": "browser-sync start --server --files '*'",
+    "server": "browser-sync start --server --files '*'",
     "build": "npx tailwindcss -i main.css -o styles.css --watch"
   },
   "keywords": [],
