@@ -21,7 +21,7 @@
       >
         <img src="img/logo.png" alt="" />
 
-        <a href="#" class="btn">Entre na lista de espera</a>
+        <button class="btn" id="waitlist-join">Entre na lista de espera</button>
       </div>
     </header>
 
@@ -42,22 +42,26 @@
 
     <!-- STEPS -->
     <div class="bg-zinc-100">
-      <div class="max-w-screen-xl m-auto flex py-10 items-center">
-        <div class="w-1/2">
+      <div
+        class="w-full lg:max-w-screen-xl m-auto flex flex-col py-10 items-center lg:flex-row"
+      >
+        <div class="lg:w-1/2 w-full px-4">
           <small class="text-zinc-700">Passo 1</small>
           <p>Crie sua conta no <strong>RockMyBio</strong> usando o Google</p>
         </div>
-        <div class="w-1/2">
+        <div class="lg:w-1/2 w-full px-4">
           <img src="img/step1.png" alt="" />
         </div>
       </div>
     </div>
     <div class="bg-zinc-50">
-      <div class="max-w-screen-xl m-auto flex py-10 items-center">
-        <div class="w-1/2">
+      <div
+        class="w-full lg:max-w-screen-xl m-auto flex flex-col-reverse py-10 items-center lg:flex-row"
+      >
+        <div class="lg:w-1/2 w-full px-4">
           <img src="img/step2.png" alt="" />
         </div>
-        <div class="w-1/2">
+        <div class="lg:w-1/2 w-full px-4">
           <small class="text-zinc-700">Passo 2</small>
           <p>Preencha informações sobre o seu perfil, como:</p>
           <ul class="mt-4 mb-4">
@@ -75,8 +79,10 @@
     </div>
 
     <div class="bg-zinc-100">
-      <div class="max-w-screen-xl m-auto flex py-10 items-center">
-        <div class="w-1/2">
+      <div
+        class="w-full lg:max-w-screen-xl m-auto flex flex-col py-10 items-center lg:flex-row"
+      >
+        <div class="lg:w-1/2 w-full px-4">
           <small class="text-zinc-700">Passo 3 - Sucesso!</small>
 
           <p>
@@ -84,7 +90,7 @@
             o seu perfil nos principais aplicativos de relacionamentos
           </p>
         </div>
-        <div class="w-1/2">
+        <div class="lg:w-1/2 w-full px-4">
           <img src="img/step3.png" alt="" />
         </div>
       </div>
@@ -92,10 +98,12 @@
 
     <!-- email signup -->
     <div class="bg-blue-500 py-20">
-      <div class="max-w-screen-xl m-auto flex items-center">
-        <div class="w-1/2">
+      <div
+        class="w-full px-4 lg:max-w-screen-xl m-auto flex flex-col lg:flex-row items-center"
+      >
+        <div class="lg:w-1/2 w-full mb-4 lg:mb-0">
           <div
-            class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+            class="w-full lg:max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
           >
             <h5
               class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400"
@@ -137,7 +145,7 @@
           </div>
         </div>
 
-        <div class="w-1/2">
+        <div class="lg:w-1/2 w-full">
           <div class="text-white font-bold">
             Seja o primeiro a ser notificado quando o RockMyBio estiver
             disponível!
@@ -145,23 +153,35 @@
 
           <div class="mt-4"></div>
 
-          <label
-            for="helper-text"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Seu email</label
+          <form
+            class="gform"
+            action="https://script.google.com/macros/s/AKfycbzXJBt9vCu0GNLNgOFIXCcp63rqpRNHRb7_pQgYQ3UuqMF93nrKacCnWRJPm39ff7WX/exec"
+            method="POST"
           >
-          <input
-            type="email"
-            id="input"
-            aria-describedby="helper-text-explanation"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="nome@email.com"
-          />
-
-          <br />
-          <button id="submit" class="btn bg-slate-600 w-full block text-center">
-            Enviar
-          </button>
+            <div class="hidden ThankYouMessage text-white">
+              Obrigado por entrar na lista de espera. Você será notificado assim
+              que o RockMyBio estiver disponível
+            </div>
+            <div class="FormElements">
+              <div class="row">
+                <div class="flex flex-col">
+                  <label for="email" class="text-white block mb-2"
+                    >Seu email</label
+                  >
+                  <input
+                    placeholder="email@email.com"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    type="email"
+                    name="email"
+                    id="email"
+                  />
+                </div>
+              </div>
+              <button class="btn-light block w-full mt-4" type="submit">
+                Enviar
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

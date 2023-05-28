@@ -29,3 +29,10 @@ new TypeIt("#app", {})
   .type('<span class="text-[#FF4458]" id="app">Tinder</span>', { delay: 500 })
   .pause(1000)
   .go();
+
+const waitlist = document.getElementById("waitlist-join");
+
+waitlist.addEventListener("click", () => {
+  // scroll to bottom
+  window.scrollTo(0, document.body.scrollHeight);
+});

@@ -6,6 +6,10 @@
   .btn {
     @apply px-4 py-4 rounded-full bg-blue-500 text-white font-bold;
   }
+
+  .btn-light {
+    @apply px-4 py-4 rounded-full bg-gray-200 text-gray-800 font-bold;
+  }
 }
 
 * {
